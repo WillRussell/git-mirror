@@ -6,7 +6,7 @@ $.ajax({
   data: {},
   success: function(data) {
     var repo = $.map(data,
-    function (repo) {return "<li><a href='" + repo.Url + "'>" + repo.name + "</a></li>";
+    function (repo) {return "<li><a href='" + repo.Url + "'>" + repo.name + "</a></li>"; 
                     });                 
                      
     $(".repos").append(repo);
@@ -27,6 +27,7 @@ $.ajax({
     $(".created").append(profile.created_at)
     $(".followers").append(profile.followers)
     $(".following").append(profile.following)
+    $(".updated_at").append(profile.updated_at)
 
   },
 });
